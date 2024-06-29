@@ -1,0 +1,47 @@
+Checked Exception
+Unchecked Exception
+
+Checked Exceptions: Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler.
+Unchecked Exceptions: The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.
+
+Methods to print the Exception information:
+printStackTrace()
+================
+This method prints exception information in the format of the Name of the exception: description of the exception, stack trace.
+
+toString()
+=========
+The toString() method prints exception information in the format of the Name of the exception: description of the exception.
+
+getMessage()
+===========
+The getMessage() method prints only the description of the exception.
+
+
+try
+catch
+finally
+throw-- used to throw custom exception
+throws -- used to delegate exception handling process to the method caller
+// means it is the responsibility of the caller to handle exception
+In this case, no matter whether an exception occurs in try-block or not finally will always be executed. But control flow will depend on whether an exception has occurred in the try block or not.
+To prevent this compile time error we can handle the exception in two ways:
+==================
+By using try catch
+By using the throws keyword
+We can use the throws keyword to delegate the responsibility of exception handling to the caller (It may be a method or JVM) then the caller method is responsible to handle that exception.
+
+Important Points to Remember about throws Keyword
+=================================================
+throws keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
+throws keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
+With the help of the throws keyword, we can provide information to the caller of the method about the exception.
+
+// exception chaining ko exception rethrow bhi kahte hai
+// Exception chaining allows you to map one exception type to another,
+// Chained Exceptions allows to relate one exception with another exception,
+// i.e one exception describes cause of another exception. For example, consider a situation in
+// which a method throws an ArithmeticException because of an attempt to divide by zero but the actual
+// cause of exception was an I/O error which caused the divisor to be zero.
+// The method will throw only ArithmeticException to the caller.
+// So the caller would not come to know about the actual cause of exception. Chained Exception is used in such type of situations.

@@ -1,0 +1,5 @@
+        // Notes: ifPresent is a consumer which take parameter but not return anything
+        // Notes: isPresent
+        // Notes: OrElseGet take supplier which take doesn't take para but return something
+        // Notes: OrElse
+        // Notes: OrElseThrow(()-> new RuntimeException("Hello Error"));
